@@ -56,4 +56,4 @@ ggplot(data = data.frame(sample_t = as.numeric(sample_t)), aes(x = sample_t)) +
           labs(title = paste("Student's t-Distribution Simulation for", chosen), x = "Log Returns", y = "Density") +
           theme_minimal()
 
-cat("Value at Risk:", quantile(sample_t, 0.05), "Expected Shortfall:", mean(sample_t[sample_t < quantile(sample_t, 0.05)]), sep = "\n")
+cat("Value at Risk (VaR):", quantile(sample_t, 0.05), "Expected Shortfall (ES):", mean(sample_t[sample_t < quantile(sample_t, 0.05)]), sep = "\n")
